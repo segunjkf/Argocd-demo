@@ -4,7 +4,6 @@ metadata:
   labels:
     app: argocd
   name: argocd
-  namespace: argocd
 spec:
   replicas: 2
   selector:
@@ -17,7 +16,7 @@ spec:
         app: argocd
     spec:
       containers:
-      - image: kaytheog/argocd
+      - image: kaytheog/argocd:latest
         name: argocd
         ports:
         - containerPort: 80
@@ -32,6 +31,6 @@ metadata:
 spec:
   ports:
   - name: argocd
-    port: 8080
+    port: 80
   selector:
     app: argocd
