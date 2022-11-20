@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: argocd-declear
+  name: argocd-declear
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: argocd
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: argocd-declear
+    spec:
+      containers:
+      - image: kaytheog/argocd-declear:latest
+        name: argocd
+        ports:
+        - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: "argocd-declear-service"
+  labels:
+    app: "argocd-declear-service"
+spec:
+  ports:
+  - name: argocd-declear
+    port: 80
+  selector:
+    app: argocd-declear
