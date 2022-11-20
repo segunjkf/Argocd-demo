@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: declarative-app # Name of the application.
-  namespace: argocd
+  namespace: argocd # The namespace where the application should be created.
 
 spec:
   project: default
