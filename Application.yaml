@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/segunjkf/Argocd-demo # Remote Github repository where ArgoCD should pull configurations from.
     targetRevision: HEAD # The last commit in the remote repository.
-    path: "demo" # Track and sync the dev path in the repository.
+    path: "demo-de" # Track and sync the dev path in the repository.
 
   destination:
     server: https://kubernetes.default.svc # Address of the Kubernetes cluster.
