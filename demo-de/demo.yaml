@@ -16,7 +16,7 @@ spec:
         app: argocd-declear
     spec:
       containers:
-      - image: kaytheog/argocd-declear:latest
+      - image: stefanprodan/podinfo
         name: argocd
         ports:
         - containerPort: 80

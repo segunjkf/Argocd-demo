@@ -16,7 +16,7 @@ spec:
         app: argocd
     spec:
       containers:
-      - image: kaytheog/argocd:latest
+      - image: alexwhen/docker-2048
         name: argocd
         ports:
         - containerPort: 80
