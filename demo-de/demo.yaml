@@ -8,7 +8,7 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: argocd
+      app: argocd-declear
   strategy: {}
   template:
     metadata:
