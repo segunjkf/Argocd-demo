@@ -25,9 +25,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: "argocd-declear-service"
+  name: "argocd-declear"
   labels:
-    app: "argocd-declear-service"
+    app: "argocd-declear"
 spec:
   ports:
   - name: argocd-declear
